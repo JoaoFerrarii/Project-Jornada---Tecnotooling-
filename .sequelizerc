@@ -1,0 +1,7 @@
+const path = require('path');
+module.exports = {
+  'config': './src/configs/db.js',
+  
+  'migrations-path': './src/database/migrations',
+
+};

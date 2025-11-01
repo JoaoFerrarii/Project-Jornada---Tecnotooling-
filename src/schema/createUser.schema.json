@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateUserSchema",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 3
+    },
+    "password": {
+      "type": "string",
+      "minLength": 8,
+      "description": "A senha deve ter no mínimo 8 caracteres"
+    },
+    "confirm_password": {
+      "type": "string",
+      "minLength": 8,
+      "description": "A confirmação da senha"
+    },
+    "matricula": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "idDepartamento": {
+      "type": "integer"
+    },
+    "idCargo": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "nome",
+    "email",
+    "password",
+    "confirm_password",
+    "matricula",
+    "idDepartamento",
+    "idCargo"
+  ]
+}

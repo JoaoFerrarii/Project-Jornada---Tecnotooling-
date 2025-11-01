@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AuthSchema",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "O e-mail do usuário para login.",
+      "errorMessage": "Formato de e-mail inválido." 
+    },
+    "password": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A senha do usuário para login.",
+      "errorMessage": "A senha é obrigatória e não pode estar em branco."
+    }
+  },
+  "required": ["email","password"],
+  "additionalProperties": false,
+  
+  "errorMessage": {
+    "required": {
+        "email": "O campo e-mail é obrigatório.",
+        "password": "O campo senha é obrigatório."
+    }
+  }
+}
